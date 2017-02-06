@@ -1,0 +1,25 @@
+pc <- 0
+repeat
+  mar <- pc
+  pc <- pc + 1
+  get()
+  ir <- mbr
+  if (ir(15:12) == 1) {
+    /* LOAD */
+    mar(15:10) <- 0
+    mar(9:0) <- ir(9:0)
+    get()
+    accum <- mbr
+  }
+  if (ir(15:12) == 4) {
+    /* MVAC */
+    ctr <- accum
+  }
+  if (ir(15:12) == 5) {
+    /* JEQ */
+      if (ctr == 0) {
+      pc(15:10) <- 0
+      pc(9:0) <- ir(9:0)
+    }
+  }
+endloop
