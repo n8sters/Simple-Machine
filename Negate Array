@@ -1,0 +1,19 @@
+0x700a   # JMP CHECK    0
+0xb014   # LOAD ARRAY
+0x8012   # ADD I        1
+0xe000   # MVAA         2
+0xc000   # LIA
+0x9011   # SUB
+0xd000   # SIA          5
+0xb001   # LA 1
+0x8012   # ADD I
+0x2012   # STORE I
+0x1013   # LOAD N
+0x9012   # SUB I        a
+0x4000   # MVAC
+0x6001   # JLT
+0x0      # HALT
+0x0                     # f
+0x0
+0x0      # ZERO
+                              
